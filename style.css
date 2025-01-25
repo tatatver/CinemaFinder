@@ -54,6 +54,7 @@ body {
     background-position: left top;
   }
 }
+
 .loader {
   display: none;
   height: 14px;
@@ -111,13 +112,17 @@ nav {
   border: none;
   padding: 10px 20px;
 }
+.main{
+  display: none;
+}
 .movieTitle {
+  display: none;
   text-align: center;
   font-size: 24px;
   margin-bottom: 12px;
 }
 .movie {
-  display: flex;
+  display: none;
   justify-content: space-between;
   gap: 0 12px;
   margin-bottom: 12px;
@@ -148,7 +153,7 @@ nav {
 }
 
 .similarMuvie {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px 30px;
 }
