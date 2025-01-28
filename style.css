@@ -152,10 +152,10 @@ nav {
   font-weight: bold;
 }
 
-.similarMuvie {
+.similarMovies {
   display: none;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px 30px;
+  gap: 20px 10px;
 }
 .similarCard {
   background-image: url(./img/film1.jpg);
