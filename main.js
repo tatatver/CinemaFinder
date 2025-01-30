@@ -13,8 +13,12 @@ const themeBtn = document.querySelector("#themeChange");
 const searchBtn = document.querySelector("#searchBtn");
 
 // Слушатели событий
-themeBtn.addEventListener("click", themeChange);
-searchBtn.addEventListener("click", findMovie);
+if (themeBtn) {
+  themeBtn.addEventListener("click", themeChange);
+}
+if (searchBtn) {
+  searchBtn.addEventListener("click", findMovie);
+}
 window.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -101,7 +105,7 @@ async function findSimilarMovie() {
 }
 
 function showSimilarMovies(movies) {
-  let similarMovies = document.querySelector('.similarMovies')
+  let similarMovies = document.querySelector(".similarMovies");
   similarMovies.style.display = "grid";
   similarMovies.innerHTML = ""; // Очищаем контейнер перед добавлением новых фильмов
 
@@ -109,7 +113,7 @@ function showSimilarMovies(movies) {
     if (movie.Poster !== "N/A") {
       const similarCardHTML = `
         <div class="similarCard" style="background-image:url(${movie.Poster})">
-          <div class="similar"></div>
+          <div class="similar" data-poster=${movie.Poster} data-title=${movie.Title}></div>
           <p>${movie.Title}</p>
         </div>`;
       similarMovies.innerHTML += similarCardHTML;
